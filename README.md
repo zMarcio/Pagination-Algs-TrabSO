@@ -98,12 +98,10 @@ O algoritmo Ótimo (ou OPT) remove a página que **não será usada por mais tem
 
 O projeto inclui uma **interface gráfica interativa** (`PageReplacementSimulatorGUI.java`) que permite:
 
-- ✅ Inserir sequência de páginas personalizada
 - ✅ Definir número de frames (molduras de memória)
 - ✅ Escolher algoritmo individual ou comparar todos simultaneamente
 - ✅ **Navegação passo a passo** pelos acessos à memória
 - ✅ Visualização em tabela com indicação de faltas
-- ✅ Gráfico comparativo automático ao finalizar
 - ✅ Tutorial integrado explicando o uso da interface
 
 ---
@@ -205,16 +203,16 @@ O programa perguntará:
 
 | Algoritmo | Número de Faltas |
 |-----------|------------------|
-| **FIFO**  | 9 faltas         |
-| **LRU**   | 10 faltas        |
+| **FIFO**  | 10 faltas         |
+| **LRU**   | 9 faltas        |
 | **Relógio** | 9 faltas       |
 | **Ótimo** | 7 faltas         |
 
 #### **Análise dos Resultados:**
 
 1. **Ótimo** teve o melhor desempenho com apenas **7 faltas**, confirmando ser o algoritmo teoricamente perfeito
-2. **FIFO** e **Relógio** empataram com **9 faltas**, mostrando boa eficiência para esta sequência
-3. **LRU** teve o pior desempenho com **10 faltas**, o que pode ocorrer dependendo do padrão de acesso
+2. **LRU** e **Relógio** empataram com **9 faltas**, mostrando boa eficiência para esta sequência
+3. **FIFO** teve o pior desempenho com **10 faltas**, o que pode ocorrer dependendo do padrão de acesso
 
 **Observação:** Os resultados variam conforme a sequência de páginas. O algoritmo Ótimo sempre terá o menor número de faltas.
 
@@ -238,7 +236,7 @@ Ref | F0 F1 F2 | Falta
   0 | 2  0  4  | *
   3 | 2  0  3  | *
   2 | 2  0  3  |  
-Total de faltas: 9
+Total de faltas: 10
 ```
 
 **Legenda:**
@@ -267,17 +265,9 @@ trabSO/
 ### **Simulador Console:**
 - ✅ Implementação dos 4 algoritmos clássicos
 - ✅ Modo interativo ou via argumentos
-- ✅ Visualização passo a passo em tabela ASCII
-- ✅ Gráfico de barras comparativo (Swing)
-- ✅ Exportação do gráfico para PNG
 
 ### **Interface Gráfica (GUI):**
 - ✅ Tutorial modal ao iniciar
-- ✅ Design profissional com cores customizadas
-- ✅ Navegação passo a passo sincronizada
-- ✅ Modo de comparação simultânea ("Todos")
-- ✅ Tabelas separadas por algoritmo
-- ✅ Gráfico automático ao finalizar navegação
 - ✅ Validação de entrada de dados
 
 ---
@@ -286,17 +276,6 @@ trabSO/
 
 ### **Modificar a Sequência Padrão:**
 Edite o método `main()` em `PageReplacementSimulator.java` ou use a interface gráfica.
-
-### **Ajustar Número de Frames:**
-Modifique o segundo parâmetro na linha de comando ou use o spinner na GUI.
-
-### **Alterar Cores da Interface:**
-Em `PageReplacementSimulatorGUI.java`, modifique as constantes de cor:
-```java
-private static final Color PRIMARY_COLOR = new Color(41, 128, 185);
-private static final Color SUCCESS_COLOR = new Color(46, 204, 113);
-// ... outras cores
-```
 
 ---
 
@@ -321,54 +300,12 @@ Unidade de memória virtual. Um processo divide sua memória em páginas de tama
 
 ---
 
-## 🎓 Uso Acadêmico
-
-Este simulador é ideal para:
-- 📖 Disciplinas de **Sistemas Operacionais**
-- 🧪 Laboratórios de **Gerenciamento de Memória**
-- 📊 Trabalhos de **Análise de Desempenho**
-- 🎯 Comparação prática entre algoritmos teóricos
-
----
-
 ## 👨‍💻 Desenvolvimento
 
 ### **Tecnologias Utilizadas:**
 - **Linguagem:** Java 11+
 - **Interface Gráfica:** Swing (javax.swing)
 - **Estruturas de Dados:** Queue, LinkedHashMap, ArrayList, Set
-- **Design Pattern:** MVC (Model-View-Controller)
-
-### **Arquitetura:**
-- **Model:** Classes `Result` e `Step` para armazenar estados
-- **View:** `PageReplacementSimulatorGUI` (interface visual)
-- **Controller:** Métodos de simulação em `PageReplacementSimulator`
-
----
-
-## 📄 Licença
-
-Este projeto foi desenvolvido para fins educacionais.
-
----
-
-## 📧 Suporte
-
-Para dúvidas ou sugestões sobre o simulador:
-- Consulte a documentação inline no código
-- Verifique os comentários nos métodos de simulação
-- Use o tutorial integrado na interface gráfica
-
----
-
-## 🚀 Próximos Passos
-
-Sugestões de melhorias futuras:
-- [ ] Implementar algoritmo LFU (Least Frequently Used)
-- [ ] Adicionar algoritmo Second Chance
-- [ ] Exportar resultados para CSV
-- [ ] Modo de comparação com múltiplas sequências
-- [ ] Gráfico de linha mostrando faltas acumuladas
 
 ---
 
@@ -383,3 +320,4 @@ O simulador desenvolvido mostrou-se uma ferramenta eficaz para visualizar e comp
 ---
 
 **Desenvolvido como material educacional para Sistemas Operacionais** 🎓
+
